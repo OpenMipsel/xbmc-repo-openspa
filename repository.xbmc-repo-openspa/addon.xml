@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.xbmc-repo-openspa" name="OpenSPA XBMC Repo" version="1.0.0" provider-name="xbmc-repo-openspa">
 		<extension point="xbmc.addon.repository" name="OpenSPA XBMC Repo">
-			<info compressed="false">https://raw.githubusercontent.com/OpenSpa/xbmc-repo-openspa/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/OpenSpa/xbmc-repo-openspa/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/OpenSpa/xbmc-repo-openspa/master/</datadir>
+			<info>http://github.com/OpenSpa/xbmc-repo-openspa/raw/master/addons.xml</info>
+			<checksum>http://github.com/OpenSpa/xbmc-repo-openspa/raw/master/addons.xml.md5</checksum>
+			<datadir zip="true">http://github.com/OpenSpa/xbmc-repo-openspa/raw/master/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 			<summary>XBMC Addons by OpenSPA</summary>
