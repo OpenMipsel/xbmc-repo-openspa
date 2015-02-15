@@ -36,7 +36,7 @@ def run():
 def main_list(params):
     plugintools.log("SuperIPTV.main_list "+repr(params))
 
-    data = plugintools.read("http://downloads.openspa.info/stream/streams")
+    data = plugintools.read("http://downloads.openspa.info/stream/streams.xml")
     matches = plugintools.find_multiple_matches(data,'<iptv>(.*?)</iptv>')
     for entry in matches:
         title = plugintools.find_single_match(entry,'<name>(.*?)</name>')
