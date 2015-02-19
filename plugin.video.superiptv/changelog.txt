@@ -1,0 +1,11 @@
+0.0.3
+
+- Added view adults channels in settings of addon.
+
+0.0.2
+
+- Update compatible with XBMC Gotham 13.2
+
+0.0.1
+
+- Initial release

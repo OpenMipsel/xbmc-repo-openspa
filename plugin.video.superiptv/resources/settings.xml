@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General">
+		<setting label="Ver contenido oculto" type="lsep" />
+		<setting id="adults" type="bool" label="Ver contenido adulto" default="false"/>
+	</category>
+</settings>

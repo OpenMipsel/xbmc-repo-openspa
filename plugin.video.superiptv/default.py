@@ -16,6 +16,7 @@ import plugintools
 art = xbmc.translatePath(os.path.join('http://downloads.openspa.info/stream/icons', ''))
 tmp = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.superiptv/tmp', ''))
 
+
 # Entry point
 def run():
     plugintools.log("---> SuperIPTV.run <---")
@@ -42,10 +43,21 @@ def main_list(params):
         title = plugintools.find_single_match(entry,'<name>(.*?)</name>')
         thumbnail = plugintools.find_single_match(entry,'<thumbnail>(.*?)</thumbnail>')
         action = plugintools.find_single_match(entry,'<action>(.*?)</action>')
+        genre = plugintools.find_single_match(entry,'<genre>(.*?)</genre>')
         url = plugintools.find_single_match(entry,'<uri>(.*?)</uri>')
 
-        fixed = title
-        plugintools.add_item( action = "play" , plot = fixed , title = fixed , thumbnail = art + "/" + thumbnail , url = url , folder = False , isPlayable = True )
+        # Control paternal
+        adults = plugintools.get_setting("adults")
+        if adults == "false":
+            print "Control paternal en marcha"
+            if genre.find("Adultos") >= 0 :
+                plugintools.log("Activando control paternal...")
+            else:
+                fixed = title
+                plugintools.add_item( action = "play" , plot = fixed , title = fixed , thumbnail = art + "/" + thumbnail , url = url , folder = False , isPlayable = True )
+        else:
+            fixed = title
+            plugintools.add_item( action = "play" , plot = fixed , title = fixed , thumbnail = art + "/" + thumbnail , url = url , folder = False , isPlayable = True )
 
 def play(params):
     plugintools.log("SuperIPTV.play " + repr(params))
