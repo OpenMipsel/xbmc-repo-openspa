@@ -13,7 +13,6 @@
 			<platform>all</platform>
 	</extension>
 </addon>
-
 <addon id="plugin.video.superiptv" name="SuperIPTV" version="0.0.3" provider-name="openspa">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
@@ -28,6 +27,20 @@
 		<description lang="es">Visualiza canales iptv en tu XBMC</description>
 		<platform>all</platform>
 		<forum>http://openspa.info</forum>
+	</extension>
+</addon>
+<addon  id="plugin.video.plexbmc" name="PleXBMC" version="3.3.6" provider-name="Hippojay (plexbmc@h-jay.com) - mod by pecinko,KodeStar,zeflash">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video audio image</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<minversion>1</minversion>
+		<summary lang="en">Browse and play local video, music and photo media files managed by Plex Media Server.</summary>
+		<description lang="en">Browse and play local video, music and photo media files managed by Plex Media Server.</description>
 	</extension>
 </addon>
 </addons>
